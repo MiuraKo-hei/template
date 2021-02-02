@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MuiThemeProvider,
   StylesProvider as MuiStylesProvider,
@@ -8,10 +7,11 @@ import styled, {
 } from "styled-components";
 import { Typography } from "@material-ui/core";
 import theme from "./theme";
+import { FunctionComponent } from "react";
 
 const Title = styled(Typography).attrs({ variant: "h2" })``;
 
-const App: React.FunctionComponent = () => {
+const App: FunctionComponent = () => {
   return (
     <MuiStylesProvider injectFirst>
       <StyledThemeProvider theme={theme}>

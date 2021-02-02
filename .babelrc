@@ -1,14 +1,21 @@
 {
+  "plugins": [
+    "babel-plugin-styled-components"
+  ],
   "presets": [
     [
       "@babel/preset-env",
       {
-        "useBuiltIns": "usage",
-        "corejs": 3
+        "corejs": 3,
+        "useBuiltIns": "usage"
       }
     ],
-    "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
     "@babel/preset-typescript"
-  ],
-  "plugins": ["babel-plugin-styled-components"]
+  ]
 }
